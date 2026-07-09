@@ -174,17 +174,6 @@
 \end{observacion}
 }
 
-% \subsection{Método alternativo de construir una tabla de verdad}
-%\begin{center}
-%\begin{tabular}{|l|l|l|l|l|l|l|}\hline
-% $p$ & $q$ & $\neg$ & $(p$ & $\wed$ & $\neg$ & q) \\\hline
-% $1$ & $1$ &  &  & &  & \\\hline
-% $1$ & $0$ &  &  & &  & \\\hline
-% $0$ & $1$ &  &  & &  & \\\hline
-% $0$ & $0$ &  &  & &  & \\\hline
-%\end{tabular}
-%\end{center}
-
 \begin{resuelto} Construya las tablas de verdad de las siguientes proposiciones
 \begin{enumerate}
  \item $p\vee \neg p$
@@ -248,7 +237,6 @@
 
 
 
-% TODO: \usepackage{graphicx} required
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{md/tabla_4-1}
@@ -379,8 +367,7 @@ Por ejemplo
 
  \end{resuelto}
 
-	% TODO: \usepackage{graphicx} required
-	\begin{figure}
+ \begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{md/tabla_silogismo}
 		\caption{
@@ -390,26 +377,8 @@ Por ejemplo
 			$$
 			p\imply,q, q\imply r \yields p \imply r.
 			$$ }
-		%\label{fig:tablasilogismo}
 		\label{fig:tabla_silogismo}
 	\end{figure}
-
-\subsection{Notación de conjuntos}
-
-Un conjunto se puede entender de forma intuitiva como una colección de objetos. Aunque la definición formal es mucho más complicada, para nuestros fines basta con esta idea sencilla.\footnote{Lee por ejemplo el artículo \href{https://www.britannica.com/science/set-theory/Axiomatic-set-theory}{Axiomatic set theory}. Para profundizar más, ve la conferencia \href{https://youtu.be/hLFit88zTYk}{¿Teoría de conjuntos? ¡Pero si es bien fácil!}, impartida en el Instituto de Matemáticas de la UNAM.}
-
-Por convención, un conjunto se puede describir de manera \emph{extensiva} escribiendo todos y cada uno de sus elementos entre paréntesis, o bien alguna característica que los defina. Por ejemplo, el conjunto de los dígitos se puede describir como
-\[
-	\set{\texttt{dígitos}}=\set{0,1,2,3,4,5,6,7,8,9}=\set{0,1,...,9}.
-\]
-
-	El conjunto de los números naturales está dado por
-	\[ \N = \set{0,1,2,3...} ,\]
-	mientras que los números naturales están dados por
-	\[ \Z = \set{0,\pm 1, \pm 2, \pm 3...} .\]
-	Al conjunto de enteros positivos los denotaremos por $ \Z^{+}. $
-
-		Si un elemento $ x $ pertenece a un conjunto $ A $, escribiremos $ x\in A $. En caso contrario, $ x\not \in A $.
 
 \subsection{Funciones proposicionales y Cuantificadores}
 
@@ -574,7 +543,7 @@ es
   Para negar una afirmación del tipo $$\forall x \in A: p(x)$$ sólo necesitamos encontrar un elemento $x_{0}\in A$ tal que $p(x)$ sea \emph{falso.}
 
 
-  A un elemento $x_{0}$ así se le conoce como \emph{contraejemeplo.}
+   A un elemento $x_{0}$ así se le conoce como \emph{contraejemplo.}
  \end{observacion}
 
  \begin{resuelto}
@@ -585,17 +554,12 @@ es
    \item
   Un contraejemplo para $\forall x \in \R: x^{2}\geq x$ es $x=\frac{1}{2}.$
    \item
-  Sin embargo, $\forall x \in \N: : x^{2}\leq x$ es siempre cierto.
+   Sin embargo, $\forall x \in \N: x^{2}\leq x$ es siempre cierto.
   \end{enumerate}
-
  \end{resuelto}
 
-
-
-
-
-%\subsection{Bibliografía}
-% Las notas de esta sección están basadas en el capítulo 4 \texttt{``Logic and Propositional Calculus''} del libro
-% \begin{center}
-%  \texttt{Lipschutz, S. and Lipson, M.;\textbf{ Schaum's Outline of Discrete Mathematics;} McGraw-Hill, 3th Edition.}
-% \end{center}
+\subsection{Bibliografía}
+Las notas de esta sección están basadas en el capítulo 4 \texttt{``Logic and Propositional Calculus''} del libro
+\begin{center}
+ \texttt{Lipschutz, S. and Lipson, M.; \textbf{Schaum's Outline of Discrete Mathematics;} McGraw-Hill, 3rd Edition.}
+\end{center}

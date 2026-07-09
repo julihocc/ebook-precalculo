@@ -1,15 +1,5 @@
 \section{Álgebra de conjuntos}
 
-%Dos conjuntos $A$ y $B$ se dicen \emph{disjuntos} si no tienen elementos en común, es decir $A\cap B=\emptyset$.
-%
-%
-%Supongamos que 
-%$$
-%S=A\cup B, \; A\cap B=\emptyset.
-%$$  Diremos que $S$ es la unión disjunta de $A$ y $B$ y se denota por $$S=A \sqcup B.$$ 
-
-
-
 \subsection{Complementos, Diferencias y Diferencias Sim\'etricas}
 
 
@@ -52,10 +42,6 @@ La \emph{diferencia sim\'etrica} de los conjuntos $A$ y $B$ se define como $$A\s
 
 
 \subsection{Conjuntos fundamentales}
-
-
-Dos conjuntos $A$ y $B$ se dicen \emph{disjuntos} si no tienen elementos en común, es decir $A\cap B=\emptyset$.
-
 
 Supongamos que 
 $$
@@ -126,11 +112,68 @@ Cada ley de conjuntos se corresponde con una ley de lógica. Por ejemplo, la ley
 
 
 {Dualidad}
-El \emph{principio de dualidad} establece que la equivalencia $E^{*}$ obtenida a partir de una ley de lógica $E$ reemplazando
+El \emph{principio de dualidad} establece que la equivalencia $E^{*}$ obtenida a partir de una ley de conjuntos $E$ reemplazando
 \[ \cup, \cap, \uset, \emptyset\] por
 \[ \cap, \cup, \emptyset, \uset\]
-sigue siendo una ley de lógica.
+sigue siendo una ley de conjuntos.
 
 
-A la proposición $E^{*}$ se le conoce como dual $E.$
+A la proposición $E^{*}$ se le conoce como dual de $E.$
+
+\subsection{Cardinalidad}
+
+La \emph{cardinalidad} de un conjunto finito $A,$ denotada por $\card{A}$ o $|A|,$ es el número de elementos distintos que contiene.
+
+\begin{problema}
+	Si $A = \set{a,b,c,d},$ entonces $\card{A} = 4.$
+	Si $B = \set{x \in \N \mid x^{2} < 10},$ entonces $B = \set{0,1,2,3}$ y $\card{B} = 4.$
+\end{problema}
+
+\begin{teorema}[Principio de Inclusión-Exclusión para dos conjuntos]
+	Sean $A$ y $B$ conjuntos finitos.  Entonces
+	$$
+	\card{A \cup B} = \card{A} + \card{B} - \card{A \cap B}.
+	$$
+\end{teorema}
+
+\begin{proof}
+	Al sumar $\card{A} + \card{B},$ los elementos de $A \cap B$ se cuentan dos veces.  Restamos $\card{A \cap B}$ para corregir esta duplicación.
+\end{proof}
+
+\begin{problema}
+	En una encuesta a 100 estudiantes, 60 estudian inglés, 45 estudian francés y 20 estudian ambos idiomas.  ?`Cuántos estudiantes estudian al menos un idioma?
+	
+	$$\card{I \cup F} = \card{I} + \card{F} - \card{I \cap F} = 60 + 45 - 20 = 85.$$
+	
+	Por tanto, 85 estudiantes estudian al menos un idioma, y 15 no estudian ninguno.
+\end{problema}
+
+\begin{teorema}[Principio de Inclusión-Exclusión para tres conjuntos]
+	Sean $A,$ $B$ y $C$ conjuntos finitos.  Entonces
+	$$
+	\card{A \cup B \cup C} = \card{A} + \card{B} + \card{C} - \card{A \cap B} - \card{A \cap C} - \card{B \cap C} + \card{A \cap B \cap C}.
+	$$
+\end{teorema}
+
+\begin{corolario}
+	Si $A$ y $B$ son disjuntos $(A \cap B = \emptyset),$ entonces
+	$$
+	\card{A \cup B} = \card{A} + \card{B}.
+	$$
+	Más generalmente, si $P_{1}, P_{2}, \dots, P_{n}$ forman una partición de $S,$ entonces
+	$$
+	\card{S} = \sum_{i=1}^{n} \card{P_{i}}.
+	$$
+\end{corolario}
+
+\begin{problema}
+	En un grupo de 50 personas, 30 prefieren café, 25 prefieren té y 15 prefieren jugo.  Además, 10 prefieren café y té, 8 prefieren café y jugo, 5 prefieren té y jugo, y 3 prefieren los tres.  ?`Cuántas personas no prefieren ninguna de estas bebidas?
+	
+	\begin{align*}
+		\card{C \cup T \cup J} &= 30 + 25 + 15 - 10 - 8 - 5 + 3 \\
+		&= 50.
+	\end{align*}
+	
+	Todas las 50 personas prefieren al menos una bebida.
+\end{problema}
 

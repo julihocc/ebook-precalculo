@@ -231,3 +231,56 @@
 		\item Algunos estudiantes tienen 25 años o más.
 	\end{enumerate}
 \end{problema}
+
+\subsection*{Cuantificadores anidados}
+
+\begin{problema}
+	Determine el valor de verdad de cada afirmación con $U = \set{1,2,3}$ como universo:
+	\begin{enumerate}
+		\item $\forall x \exists y: x < y$
+		\item $\exists y \forall x: x < y$
+		\item $\forall x \forall y: x + y \geq 2$
+		\item $\exists x \exists y: x \cdot y = 6$
+		\item $\forall x \exists y: x \cdot y = 1$
+	\end{enumerate}
+	?`Qué diferencia hay entre los enunciados (a) y (b)?
+\end{problema}
+
+\begin{problema}
+	Traduzca al lenguaje cotidiano y determine el valor de verdad (con $U = \Z$):
+	\begin{enumerate}
+		\item $\forall x \exists y: x + y = 0$
+		\item $\exists y \forall x: x + y = 0$
+		\item $\forall x \exists y: x \cdot y = 1$
+		\item $\exists y \forall x: x \cdot y = x$
+	\end{enumerate}
+	Note que el orden de los cuantificadores cambia el significado.
+\end{problema}
+
+\begin{problema}
+	La definición formal de límite en cálculo es:
+	$$
+	\lim_{x \to a} f(x) = L \iff \forall \epsilon > 0, \exists \delta > 0: 0 < \abs{x-a} < \delta \imply \abs{f(x) - L} < \epsilon.
+	$$
+	\begin{enumerate}
+		\item ?`Qué significa esta definición en palabras?
+		\item Escriba la negación formal de esta definición.
+		\item ?`Qué significa la negación en palabras?
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}
+	Considere las siguientes afirmaciones sobre funciones $f: \R \to \R$:
+	\begin{enumerate}
+		\item $\forall x \exists y: f(x) = y$
+		\item $\forall y \exists x: f(x) = y$
+		\item $\exists x \forall y: f(x) = y$
+		\item $\forall x_1 \forall x_2: f(x_1) = f(x_2) \imply x_1 = x_2$
+	\end{enumerate}
+	\begin{enumerate}
+		\item ?`Cuál de estas afirmaciones dice que $f$ es una función bien definida?
+		\item ?`Cuál dice que $f$ es sobreyectiva?
+		\item ?`Cuál dice que $f$ es inyectiva?
+		\item ?`Es posible que (c) sea verdadera para alguna función?
+	\end{enumerate}
+\end{problema}
